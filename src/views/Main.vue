@@ -3,14 +3,18 @@
   <section class="section">
     <div class="container">
       <div class="columns">
-        <div class="column">
+        <div class="column has-text-centered">
           <p class="notification is-light is-warning" v-if="packages.length == 0">กำลังโหลดข้อมูล...</p>
+          <br>
+          <figure class="image is-inline-block">
+            <img src="../assets/robotic.png">
+          </figure>
         </div>
       </div>
       <div class="columns">
-        <div class="column">
-          <h1 class="title has-text-centered is-size-5">คู่มือการเก็บสิ่งตัวอย่างทางเทคนิคการแพทย์ออนไลน์</h1>
-          <h1 class="subtitle has-text-centered is-size-6">ฉบับปรับปรุงล่าสุด 1 พ.ค. 2564</h1>
+        <div class="column has-text-centered">
+          <h1 class="title is-size-5">คู่มือการเก็บสิ่งตัวอย่างทางเทคนิคการแพทย์ออนไลน์</h1>
+          <h1 class="subtitle is-size-6">ฉบับปรับปรุงล่าสุด 1 พ.ค. 2564</h1>
         </div>
       </div>
       <div class="columns">
