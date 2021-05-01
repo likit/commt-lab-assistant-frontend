@@ -25,8 +25,13 @@ const routes = [
         component: ()=> import('../views/BloodTube.vue')
     },
     {
+        path: '/about',
+        name: 'About',
+        component: ()=> import('../views/About.vue')
+    },
+    {
         path: '/technique/blood-drawing',
-        name: 'BloodDrawingTechnique',
+        name: 'blood-drawing-technique',
         component: ()=> import('../views/blood-drawing-technique.vue')
     }
 ]

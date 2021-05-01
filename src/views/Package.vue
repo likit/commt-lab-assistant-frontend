@@ -3,6 +3,11 @@
     <section class="section">
       <div class="container">
         <div class="columns">
+          <div class="column">
+            <p class="notification is-light is-warning" v-if="!pkg.name">กำลังโหลดข้อมูล...</p>
+          </div>
+        </div>
+        <div class="columns">
           <div class="column has-text-centered">
             <router-link class="button is-light" :to="{ name: 'MainPage' }">
             <span class="icon">

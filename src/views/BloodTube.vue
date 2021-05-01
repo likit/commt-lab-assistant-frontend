@@ -4,13 +4,18 @@
     <div class="container">
       <div class="columns">
         <div class="column has-text-centered">
+          <p class="notification is-light is-warning" v-if="!tube.name">กำลังโหลดข้อมูล...</p>
           <router-link class="button is-light" :to="{ name: 'MainPage' }">
             <span class="icon">
               <i class="fas fa-chevron-left"></i>
             </span>
             <span>กลับ</span>
           </router-link>
-          <figure class="image is-1by1" v-if="tube.image">
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column has-text-centered">
+          <figure class="image is-inline-block" v-if="tube.image">
             <img :src="tube.image[0].url" class="is-rounded">
           </figure>
           <h1 class="title">{{tube.name}}</h1>
@@ -41,7 +46,16 @@ export default {
   name: "BloodTube",
   data () {
     return {
-      tube: {}
+      tube: {
+        name: null,
+        speciman: {
+          specimens: null,
+          description: null,
+        },
+        anticoagulant: {
+          name: null
+        }
+      }
     }
   },
   mounted() {

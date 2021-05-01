@@ -9,6 +9,12 @@
       </div>
       <div class="columns">
         <div class="column">
+          <h1 class="title has-text-centered is-size-5">คู่มือการเก็บสิ่งตัวอย่างทางเทคนิคการแพทย์ออนไลน์</h1>
+          <h1 class="subtitle has-text-centered is-size-6">ฉบับปรับปรุงล่าสุด 1 พ.ค. 2564</h1>
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column">
           <div class="panel is-link">
             <div class="panel-heading">
               ชุดรายการตรวจ
@@ -63,8 +69,11 @@
             <div class="panel-heading">
               คำแนะนำ
             </div>
-            <router-link class="panel-block" :to="{name: 'BloodDrawingTechnique'}">
+            <router-link class="panel-block" :to="{name: 'blood-drawing-technique'}">
               เทคนิคการเก็บตัวอย่างเลือด
+            </router-link>
+            <router-link class="panel-block" :to="{name: 'About'}">
+              เกี่ยวกับผู้พัฒนา
             </router-link>
           </div>
         </div>
