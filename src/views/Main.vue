@@ -75,6 +75,9 @@
             <router-link class="panel-block" :to="{name: 'About'}">
               เกี่ยวกับผู้พัฒนา
             </router-link>
+            <router-link class="panel-block" :to="{name: 'Reference'}">
+              เอกสารอ้างอิง
+            </router-link>
           </div>
         </div>
       </div>

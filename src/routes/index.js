@@ -30,6 +30,11 @@ const routes = [
         component: ()=> import('../views/About.vue')
     },
     {
+        path: '/references',
+        name: 'Reference',
+        component: ()=> import('../views/Reference.vue')
+    },
+    {
         path: '/technique/blood-drawing',
         name: 'blood-drawing-technique',
         component: ()=> import('../views/blood-drawing-technique.vue')
