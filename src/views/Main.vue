@@ -4,7 +4,7 @@
     <div class="container">
       <div class="columns">
         <div class="column has-text-centered">
-          <p class="notification is-light is-warning" v-if="packages.length == 0">กำลังโหลดข้อมูล...</p>
+          <p class="notification is-light is-warning" v-if="packages.length == 0">กำลังโหลดข้อมูล...ใช้เวลาไม่เกิน 20 วินาที</p>
           <br>
           <figure class="image is-inline-block">
             <img src="../assets/robotic.png">
