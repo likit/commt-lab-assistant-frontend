@@ -10,7 +10,7 @@
             </span>
             <span>กลับ</span>
           </router-link>
-          <figure class="image is-1by1">
+          <figure class="image is-1by1" v-if="tube.image">
             <img :src="tube.image[0].url" class="is-rounded">
           </figure>
           <h1 class="title">{{tube.name}}</h1>
