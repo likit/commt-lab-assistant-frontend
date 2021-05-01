@@ -21,12 +21,13 @@
             </p>
             <div class="panel is-info">
               <div class="panel-heading">รายการตรวจ</div>
-              <div class="panel-block" v-for="test in pkg.tests" :key="test.id">
+              <router-link class="panel-block" v-for="test in pkg.tests" :key="test.id"
+                :to="{ name: 'Test', params: { testId: test.id}}">
                 <span class="panel-icon">
                   <i class="fas fa-chevron-right"></i>
                 </span>
                 {{ test.name }}
-              </div>
+              </router-link>
             </div>
           </div>
         </div>

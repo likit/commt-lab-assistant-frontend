@@ -46,12 +46,14 @@
             <div class="panel-heading">
               รายการทดสอบ
             </div>
-            <a class="panel-block" v-for="test in tests" :key="test.id">
+            <router-link class="panel-block" v-for="test in tests"
+                         :to="{ name: 'Test', params: {testId: test.id}}"
+                         :key="test.id">
               <span class="panel-icon">
                 <i class="fas fa-chevron-right"></i>
               </span>
               {{ test.name }}
-            </a>
+            </router-link>
           </div>
         </div>
       </div>
