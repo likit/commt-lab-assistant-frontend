@@ -10,6 +10,11 @@ const routes = [
         component: ()=> import('../views/Main.vue')
     },
     {
+        path: '/packages/:pacakgeId',
+        name: 'Package',
+        component: ()=> import('../views/Package.vue')
+    },
+    {
         path: '/blood-tubes/:tubeId',
         name: 'BloodTube',
         component: ()=> import('../views/BloodTube.vue')

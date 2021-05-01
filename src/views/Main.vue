@@ -13,12 +13,13 @@
             <div class="panel-heading">
               ชุดรายการตรวจ
             </div>
-            <a class="panel-block" v-for="pkg in packages" :key="pkg.id">
+            <router-link :to="{ name: 'Package', params: { packageId: pkg.id }}"
+                         class="panel-block" v-for="pkg in packages" :key="pkg.id">
               <span class="panel-icon">
                 <i class="fas fa-chevron-right"></i>
               </span>
               {{ pkg.name }}
-            </a>
+            </router-link>
           </div>
         </div>
       </div>
