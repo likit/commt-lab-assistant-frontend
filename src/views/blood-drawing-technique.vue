@@ -1,6 +1,7 @@
 <template>
   <section class="section">
     <div class="container">
+      <br>
       <div class="columns">
         <div class="column" v-if="content">
           <markdown-it-vue-light :content="content"></markdown-it-vue-light>
