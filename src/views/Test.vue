@@ -57,6 +57,22 @@
               <label class="label">ค่าอ้างอิง</label>
               {{ test.referenceValue }}
             </p>
+            <div class="notification is-light is-info has-text-centered">
+              <span class="icon is-large">
+                <i class="fas fa-vial fa-2x"></i>
+              </span>
+              <label class="label">หลอดเก็บเลือด</label>
+              <div v-for="tube in test.blood_tubes" :key="tube.id" class="has-text-centered">
+                <figure class="image is-128x128 is-inline-block" v-if="tube.image">
+                  <img :src="tube.image[0].url" class="is-rounded">
+                </figure>
+                <p>
+                  <router-link :to="{name: 'BloodTube', params: {tubeId: tube.id}}">
+                    {{ tube.name }}
+                  </router-link>
+                </p>
+              </div>
+            </div>
             <p class="notification is-light is-info">
               <span class="icon is-large">
                 <i class="fas fa-user fa-2x"></i>
@@ -82,7 +98,9 @@
 </template>
 
 <script>
-import axios from "axios";
+import axios from 'axios'
+const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjE5NDM1MjM5LCJleHAiOjE2MjIwMjcyMzl9.eM2PSByb4Gm4fsxgtRcU7No2PMB9OWHgB4qTtWNcSBQ'
+axios.defaults.headers.common = {'Authorization': `Bearer ${token}`}
 
 export default {
   name: "Test",

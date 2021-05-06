@@ -8,13 +8,17 @@
         </div>
       </div>
       <div class="columns">
-        <div class="column has-text-centered">
+        <div class="column">
           <router-link class="button is-light" :to="{ name: 'MainPage' }">
             <span class="icon">
               <i class="fas fa-chevron-left"></i>
             </span>
             <span>กลับ</span>
           </router-link>
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column has-text-centered">
           <figure class="image is-inline-block" v-if="tube.image">
             <img :src="tube.image[0].url" class="is-rounded">
           </figure>
@@ -41,6 +45,8 @@
 
 <script>
 import axios from "axios";
+const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjE5NDM1MjM5LCJleHAiOjE2MjIwMjcyMzl9.eM2PSByb4Gm4fsxgtRcU7No2PMB9OWHgB4qTtWNcSBQ'
+axios.defaults.headers.common = {'Authorization': `Bearer ${token}`}
 
 export default {
   name: "BloodTube",
